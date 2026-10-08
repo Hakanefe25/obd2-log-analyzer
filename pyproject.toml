@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obd2-log-analyzer"
+version = "0.1.0"
+description = "A small OBD-II CSV log analysis CLI."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "Hakan Efe" }
+]
+license = { text = "MIT" }
+
+[project.scripts]
+obd2-analyze = "obd2_analyzer.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
